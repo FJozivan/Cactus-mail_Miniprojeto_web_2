@@ -31,7 +31,7 @@ class usuario{
 	public function Verifica_dados($dados){
 		try{
 			$sql = "select * from 
-			Usuario where nome = :login and senha = :senha";
+			Usuario where email = :login and senha = :senha";
 
 			$busca = conexaoPDO::conectar()->prepare($sql);
 
